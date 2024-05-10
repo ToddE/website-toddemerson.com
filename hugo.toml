@@ -25,6 +25,7 @@ theme = 'hugo-coder'
   hideColorSchemeToggle = "false"
   enableTwemoji = "false"
   disableDefaultJsScripts = "false"
+  poweredby = ""
 
 # information found in config.toml   
 [taxonomies]
@@ -47,7 +48,7 @@ theme = 'hugo-coder'
 [[menu.main]]
   name = "Blog"
   weight = 3
-  url = "posts/"
+  url = "blog/"
 
 # Social links
 [[params.social]]
