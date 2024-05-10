@@ -11,18 +11,18 @@ public_folder: "/images" # The src attribute for uploaded media will begin with 
 collections:
   - label: "Pages"
     name: "pages"
+    editor:
+      preview: true
     files:
       - label: 'About'
         name: 'about'
         file: '/content/about.md'
         fields:
-          - { label: Title, name: title, widget: string }
           - { label: Content, name: content, widget: markdown }
       - label: "Contact"
         name: 'contact'
         file: 'content/contact.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Content', name: 'content', widget: 'markdown' }
   - label: 'Blog'
     name: 'blog'
