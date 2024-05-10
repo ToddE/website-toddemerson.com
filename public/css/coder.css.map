@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "coder.css",
-	"sourceRoot": "/home/emerson/Websites/toddemerson.com",
+	"sourceRoot": "/home/emerson/Websites/website-toddemerson.com",
 	"sources": [
 		"themes/hugo-coder/assets/scss/coder.scss",
 		"themes/hugo-coder/assets/scss/css/normalize.css",

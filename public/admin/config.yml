@@ -19,13 +19,13 @@ collections:
         file: '/content/about.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: Body, name: body, widget: markdown }
+          - { label: Content, name: content, widget: markdown }
       - label: "Contact"
         name: 'contact'
         file: 'content/contact.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Content', name: 'content', widget: 'markdown' }
   - label: 'Blog'
     name: 'blog'
     folder: 'content/blog'

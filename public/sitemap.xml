@@ -16,8 +16,6 @@
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/map-body-this-is-an-about/</loc>
-  </url><url>
     <loc>http://localhost:1313/authors/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
