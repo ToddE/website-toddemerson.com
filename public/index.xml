@@ -6,14 +6,28 @@
     <description>Recent content on Todd Emerson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 May 2024 14:51:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 May 2024 16:02:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>another test blog</title>
+      <link>http://localhost:1313/blog/2024-05-10-another-test-blog/</link>
+      <pubDate>Fri, 10 May 2024 16:02:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2024-05-10-another-test-blog/</guid>
+      <description>this is a little diddy</description>
+    </item>
     <item>
       <title>test blog after commit</title>
       <link>http://localhost:1313/blog/2024-05-10-test-blog/</link>
       <pubDate>Fri, 10 May 2024 14:51:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/2024-05-10-test-blog/</guid>
       <description>test 123</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD This is me. For better or worse. Link to heading title: yo yo o content: this is something you should know about me. . . Link to heading d8b03fb5c16b86b9cbd89574871cb95674708f33</description>
     </item>
   </channel>
 </rss>
