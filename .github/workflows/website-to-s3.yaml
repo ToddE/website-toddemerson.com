@@ -1,6 +1,7 @@
 name: Hugo S3
 
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
   pull_request:
