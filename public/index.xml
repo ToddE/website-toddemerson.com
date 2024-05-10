@@ -23,6 +23,13 @@
       <description>test 123</description>
     </item>
     <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>Everything you wanna know about me. . . and some things you don&amp;rsquo;t</description>
+    </item>
+    <item>
       <title>keep in touch </title>
       <link>http://localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
