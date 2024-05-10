@@ -71,4 +71,4 @@ theme = 'hugo-coder'
 name = "production"
 
 # URL specifies the Go Cloud Development Kit URL to deploy to. Examples:
-URL = "{{ getenv "HUGO_DEPLOY_URL" }}"
+URL = {{ getenv "HUGO_DEPLOY_URL" }}
