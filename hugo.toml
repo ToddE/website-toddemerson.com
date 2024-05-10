@@ -1,0 +1,65 @@
+baseURL = 'https://toddemerson.com/'
+languageCode = 'en-us'
+title = 'Todd Emerson'
+theme = 'hugo-coder'
+
+
+[params]
+  text_color = ""
+  author = "A. Todd Emerson"
+  info = ["Results-Driven Product & Business Development"]
+  favicon = ""
+  site_logo = ""
+  description = "Todd Emerson's personal website"
+  keywords = "blog, personal"
+  avatarURL = "images/ToddEmerson_avatar.jpg"
+  faviconSVG = ""
+  favicon_32 = ""
+  favicon_16 = ""
+  touchIcon = ""
+  mask_icon = ""
+  mask_icon_color = "#5bbad5"
+  since = ""
+  maxSeeAlsoItems = ""
+  colorScheme = "auto"
+  hideColorSchemeToggle = "false"
+  enableTwemoji = "false"
+  disableDefaultJsScripts = "false"
+
+# information found in config.toml   
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Menus
+[[menu.main]]
+  name = "About"
+  weight = 1
+  url = "about/"
+
+[[menu.main]]
+  name = "Contact"
+  weight = 2
+  url = "contact/"
+
+[[menu.main]]
+  name = "Blog"
+  weight = 3
+  url = "posts/"
+
+# Social links
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa-brands fa-linkedin fa-2x"
+  weight = 1
+  url = "https://www.linkedin.com/in/toddemerson/"
+
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/ToddE"
+
+
