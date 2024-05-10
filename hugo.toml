@@ -35,15 +35,15 @@ theme = 'hugo-coder'
   author = "authors"
 
 # Menus
-[[menu.main]]
-  name = "About"
-  weight = 1
-  url = "about/"
+#[[menu.main]]
+#  name = "About"
+#  weight = 1
+#  url = "about/"
 
 [[menu.main]]
-  name = "Contact"
-  weight = 2
-  url = "contact/"
+#  name = "Contact"
+#  weight = 2
+#  url = "contact/"
 
 [[menu.main]]
   name = "Blog"
