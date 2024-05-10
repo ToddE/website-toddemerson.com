@@ -64,3 +64,11 @@ theme = 'hugo-coder'
   url = "https://github.com/ToddE"
 
 
+[deployment]
+
+[[deployment.targets]]
+# An arbitrary name for this target.
+name = "production"
+
+# URL specifies the Go Cloud Development Kit URL to deploy to. Examples:
+URL = {{ getenv "HUGO_DEPLOY_URL" }}
