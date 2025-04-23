@@ -1,5 +1,5 @@
 ---
-title: "The Outsider: Returning Home to Central Virginia"
+title: "The Outsider: Returning Home"
 date: 2025-04-11
 description: "An Outsider's View of Central Virginia's Tech"
 author: Todd Emerson
