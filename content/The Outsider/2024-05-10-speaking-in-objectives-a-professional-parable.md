@@ -3,6 +3,7 @@ title: "Speaking in Objectives: A Professional Parable"
 date: 2024-05-10T16:32:00.000Z
 description: He added yellow.
 author: Warren Emerson & A. Todd Emerson
+draft: false
 ---
 The following story was one my Dad told me many times as a reminder that it is often most effective to explain what you're trying to accomplish rather than how you want something done. In my early days as a Program Manager, I had a thoughtful manager who took the time to sit with me and put it in the terms of explaining the "what" rather than the "how". 
 
@@ -11,7 +12,6 @@ This doesn't mean we shouldn't dive deep and work through the complexities of pr
 As a product manager, I enjoy spending time working through detailed integration use cases that define the behavior of a solution, but when it comes to implementation decisions, I engage with my engineering stakeholders to work through the details around architecture and approach. Once we settle on a direction, I can assist with documenting the direction of ***how*** we intend to tackle a problem, but I've found that the fastest way to come to a solution is to clearly define ***what*** needs to be accomplished (including thinking through alternate and exception paths).
 
 - - -
-
 
 
 "You have to use the night crew at the print shop? Boy you are in trouble." My friend told me. "They don't know what they are doing. I spent two hours in the middle of the night trying to get the right color match. They are okay for package printing, but they just don't understand merchandising standards, and George, our merchandising manager was there until four in the morning doing the same thing,"

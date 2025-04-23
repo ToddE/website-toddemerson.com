@@ -26,6 +26,9 @@ theme = 'hugo-coder'
   enableTwemoji = "false"
   disableDefaultJsScripts = "false"
   poweredby = ""
+  customSCSS = ["scss/custom.scss"]
+  commentoURL = "https://cdn.commento.io"
+  
 
 # information found in config.toml   
 [taxonomies]
@@ -35,10 +38,10 @@ theme = 'hugo-coder'
   author = "authors"
 
 # Menus
-#[[menu.main]]
-#  name = "About"
-#  weight = 1
-#  url = "about/"
+[[menu.main]]
+ name = "About"
+ weight = 1
+ url = "about/"
 
 [[menu.main]]
 #  name = "Contact"
@@ -46,9 +49,9 @@ theme = 'hugo-coder'
 #  url = "contact/"
 
 [[menu.main]]
-  name = "Blog"
+  name = "Blog: The Outsider"
   weight = 3
-  url = "blog/"
+  url = "the-outsider/"
 
 # Social links
 [[params.social]]
