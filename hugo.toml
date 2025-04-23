@@ -66,6 +66,8 @@ theme = 'hugo-coder'
   weight = 1
   url = "https://github.com/ToddE"
 
+[params.cusdis] # https://cusdis.com
+  data_app_id = "dd95f208-2371-4bc7-83df-a3b2b31834d4"
 
 [deployment]
 
