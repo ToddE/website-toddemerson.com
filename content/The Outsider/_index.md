@@ -1,5 +1,5 @@
 
-# _The Outsider_
+# The Outsider
 Exploring the journey of perpetual curiosity and the perspective that comes from standing at the edges.
 
 #### About Me
