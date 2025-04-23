@@ -4,6 +4,7 @@ date: 2025-04-11
 description: "An Outsider's View of Central Virginia's Tech"
 author: Todd Emerson
 draft: false
+# disableComments: false
 ---
 
 I have been using the internet since early 1990, before many people had even heard of it. At Virginia Commonwealth University, I received an undergraduate grant from the State Council for Higher Education in Virginia (SCHEV) that allowed me to explore my curiosity about the internet and computers. With this opportunity, I built an application that allowed students to submit, review, and revise their papers.

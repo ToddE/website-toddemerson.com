@@ -27,7 +27,7 @@ theme = 'hugo-coder'
   disableDefaultJsScripts = "false"
   poweredby = ""
   customSCSS = ["scss/custom.scss"]
-  commentoURL = "https://cdn.commento.io"
+  # cusdis = "https://cusdis.com"
   
 
 # information found in config.toml   
