@@ -66,8 +66,23 @@ theme = 'hugo-coder'
   weight = 1
   url = "https://github.com/ToddE"
 
-[params.cusdis] # https://cusdis.com
-  data_app_id = "dd95f208-2371-4bc7-83df-a3b2b31834d4"
+# [params.cusdis] # https://cusdis.com
+#   data_app_id = "dd95f208-2371-4bc7-83df-a3b2b31834d4"
+
+[params.giscus] # https://giscus.app
+  repo = "ToddE/website-toddemerson.com"
+  repoID = "R_kgDOL53jKw"
+  category = "General"
+  categoryID = "DIC_kwDOL53jK84Cpa1u"
+  mapping = "pathname"
+  term = ""
+  strict = "0"
+  reactionsEnabled = "1"
+  emitMetadata = "0"
+  inputPosition = "bottom"
+  theme = "preferred_color_scheme"
+  lang = "en"
+  loading = ""
 
 [deployment]
 

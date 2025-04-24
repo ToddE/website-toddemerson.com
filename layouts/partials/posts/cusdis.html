@@ -1,0 +1,39 @@
+{{- if isset .Site.Params "cusdis" -}}
+    {{- if and (isset .Site.Params.cusdis "data_app_id") (eq (.Params.disableComments | default false) false) -}}
+        <div class="comments">
+            <h4>Comments:</h4>
+            <div id="cusdis_thread"
+                 data-host="https://cusdis.com"
+                 data-app-id="{{ .Site.Params.cusdis.data_app_id }}"
+                 data-page-id="{{ .File.UniqueID }}"
+                 data-page-url="{{ .Permalink }}"
+                 data-page-title="{{ .Title }}"
+                 data-theme="auto">
+            </div>
+            <script async defer data-theme="auto" src="https://cusdis.com/js/cusdis.es.js"></script>
+        </div>
+    {{- end -}}
+{{- end -}}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+            const cusdisFrame = document.querySelector('#cusdis_thread iframe');
+
+            if (cusdisFrame) {
+                cusdisFrame.onload = function () {
+                    const iframeDocument = cusdisFrame.contentDocument || cusdisFrame.contentWindow.document;
+                    const body = iframeDocument.body;
+
+                    // Function to adjust iframe height
+                    const adjustIframeHeight = () => {
+                        const contentHeight = body.scrollHeight;
+                        cusdisFrame.style.height = contentHeight + 'px';
+                    };
+
+                    // Adjust on load and potentially on content changes (more advanced)
+                    adjustIframeHeight();
+                    // You might need to observe for changes in the iframe's body if content loads dynamically
+                };
+            }
+        });
+</script>
+

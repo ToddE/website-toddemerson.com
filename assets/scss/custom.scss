@@ -115,3 +115,10 @@ h6 {
   }
 }
 
+#cusdis_thread {
+  height: auto !important; /* Let the height adjust to the content */
+  max-height: none !important; /* Remove any maximum height restrictions */
+  overflow: visible !important; /* Ensure all content is visible, no scrolling */
+    background-color: $bg-color;
+  font-family: $font-family;
+}
