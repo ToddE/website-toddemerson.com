@@ -17,7 +17,7 @@ Throughout my professional journey in Seattle, I was fortunate to have exception
 
 Now, over 30 years later, I've returned to the Central Virginia to be closer to family -- a decision that has brought both personal challenges and rewards. Once again, I have become an outsider, fueled by deep curiosity and a desire to drive growth and innovation during this transformative time for the region. Once again, I am trying to discover how to best apply my skills and experience to benefit the region. 
 
-### SimpleThread Leading the Way
+#### SimpleThread Leading the Way
 Last year, before relocating to Richmond, I attended the inaugural EnergyTech conference—a technology event focused on the energy sector and organized by SimpleThread. At the opening, [Al Tenhundfeld](https://www.linkedin.com/in/atenhundfeld), [SimpleThread](https://simplethread.com)'s CTO, shared his compelling vision: Central Virginia possesses all the necessary resources, talent, and customer demand to become a significant hub for innovation and growth in the energy sector.
 
 The essential components already exist in Central Virginia, but they need a catalyst to unite them and energize individuals, groups, and companies into a recognizable sector. While many regional governments and organizations talk about building new technology centers, they typically lack the ability to transform talk into action. It takes thoughtful, creative people and companies to energize and amplify core themes throughout a region through concrete actions and examples.
