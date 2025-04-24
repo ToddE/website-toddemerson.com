@@ -7,10 +7,10 @@ draft: false
 # disableComments: false
 ---
 
-## An Outsider View: EDI
+# An Outsider View: EDI
 After leaving Amazon, I joined a company that created and sold product primarily through retailers like Walmart, Macy's, and Kohls. As an [Outsider](/the-outsider/#the-outsider) to this industry, I had a lot to learn about the business. 
 
-My responsibilities included overseeing the development of our more technical products (smartwatches, ear buds and other connected devices) as well as managing all of the company's technology needs. We experienced 10x growth, expanding our product offerings significantly and achieving substantial annual revenue. This growth and our increasing retail customer base presented considerable operational and logistical challenges, leading us to outgrow our ERP system and implement [Infor](https://www.infor.com/). 
+My responsibilities included overseeing the development of our more technical products (smartwatches, ear buds and other connected devices) as well as managing all of the company's technology needs. In a short amount of time, we experienced 10x growth, expanding our product offerings significantly and achieving hundreds of millions of dollars in annual revenue. This growth and our increasing retail customer base presented considerable operational and logistical challenges, leading us to outgrow our ERP system and implement [Infor](https://www.infor.com/). 
 
 This was my first direct experience with Electronic Data Interchange (EDI)](https://en.wikipedia.org/wiki/Electronic_data_interchange). Over the years, I’d observed the complexities of EDI integration. We chose a tool to standardize EDI messages into a more "digestible" JSON format, which helped with the new ERP. However, accurately mapping partner EDI and handling exceptions remained a challenge.
 
@@ -20,7 +20,7 @@ Over a year ago, at an Infor conference panel, I casually proposed using blockch
 
 The following narrative is a result of my on-going conversations with AI platforms (primary [Gemini](https://gemini.google.com))about how this might be implemented. 
 
-### EDI: The Supply Chain's Tower of Babel
+## EDI: The Supply Chain's Tower of Babel
 Imagine a world where every business speaks its own unique language. A retailer places an order, but the supplier struggles to decipher it. A shipper receives instructions, but key details are lost in translation. This is the reality of today's supply chains, still heavily reliant on Electronic Data Interchange (EDI).
 
 Despite decades of standardization efforts, EDI remains a Tower of Babel. Each company implements it differently, leading to a complex web of bespoke mappings, costly errors, and agonizingly slow transactions. I've seen firsthand the frustration of teams wrestling with incompatible EDI formats, spending countless hours on data reconciliation instead of focusing on strategic growth. The promise of seamless, efficient communication remains elusive.
@@ -35,7 +35,7 @@ Electronic Data Interchange (EDI) has been a cornerstone of B2B data exchange fo
 Complexity and Errors: The intricate mapping and translation processes are prone to errors, leading to data inconsistencies and potential disruptions in the supply chain.
 - **Onboarding Challenges:** Integrating new trading partners into an EDI ecosystem can be time-consuming and complex due to the need for custom configurations.
 
-### Solution Objectives
+## Solution Objectives
 To address these issues, the industry should establish a next-generation platform for supply chain data exchange with the following objectives (unless you can think of better ones):
 - **Standardization:** Ensure that supply chain communications adhere to a uniform data format across all entities, dramatically reducing integration complexity and promoting seamless interoperability.
 - **Interoperability:** Enable seamless data exchange between all participants, regardless of their size or specific systems, by adhering to a single, enforced standard.
@@ -52,7 +52,7 @@ Ease of Integration: Facilitate straightforward integration with participants' e
 
 
 
-### Solution: DLT-Based Need-to-Know Privacy and Enforced Standardization
+## Solution: DLT-Based Need-to-Know Privacy and Enforced Standardization
 To address the shortcomings of EDI, this approach leverages Distributed Ledger Technology (DLT). DLT, at its core, is a way of recording and sharing data across multiple computers in a network, rather than relying on a central database. This provides increased transparency, auditability, and data integrity, as once a transaction is recorded, it becomes very difficult to change or delete.
 
 In a typical blockchain, every transaction is visible to all participants. However, for sensitive business data in a supply chain, a "need-to-know" approach is more appropriate. This means that transaction details are shared only between the parties directly involved (e.g., supplier and retailer), enhancing privacy and minimizing unnecessary data dissemination. To achieve this, each participant operates a node, maintaining a copy of the ledger with only the information that participant is authorized to see.
@@ -67,15 +67,16 @@ The DLT approach also supports versioning of these distributed applications to a
 
 **Handling Exceptions:** While this DLT-based platform enforces standardized data formats and typical workflows, real-world supply chains often involve exceptions. The platform is designed to accommodate these deviations by providing a framework for recording agreed-upon conditions or modifications to standard processes. The detailed decision-making for handling exceptions usually remains within each participant's internal systems. However, the DLT serves as the auditable and transparent record of the final agreed-upon terms and the actual execution of events, ensuring all parties have a shared understanding, even when scenarios deviate from the norm.**
 
+
 As of the writing of this narrative, platforms like [Corda](https://r3.com/get-corda/) seem well-suited to implement these concepts.
 
 
 
 
-### Technical Design: Architecture, Deployment, and Scalability
+## Technical Design: Architecture, Deployment, and Scalability
 This section outlines the technical architecture of the proposed DLT solution, focusing on how it ensures secure, efficient, and scalable data exchange.
 
-#### Participant Nodes and Secure Connectivity:
+### Participant Nodes and Secure Connectivity:
 Each participant (retailer, supplier, etc.) operates a node on suitable hardware within their private network. Nodes communicate through secure channels (VPNs, leased lines) using strong authentication and encryption. Approaches for secure communication may include:
 - **Private Network Infrastructure:** The consortium will establish or utilize a dedicated private network infrastructure (e.g., a physically isolated network segment, a managed private network service) that interconnects all participant locations. This ensures network-level isolation from the public internet.  
 - **Strict Firewall Rules and Access Control Lists (ACLs):** Communication between participant nodes will be governed by explicit and tightly controlled firewall rules and ACLs implemented on network devices at each participant's edge. These rules will specify the exact IP addresses and ports allowed for communication between authorized nodes, effectively limiting network access to only necessary interactions.
@@ -84,30 +85,31 @@ Each participant (retailer, supplier, etc.) operates a node on suitable hardware
 
 When considering the [Solution Objectives](#solution-objectives) the most effective strategy is likely a combination of mTLS + Node-Specific Cryptographic Identities combined with Firewall Rules. 
 
-#### Key Management
+### Key Management
 Participants are responsible for managing their cryptographic keys. Ideally the service or platform would assist with Key Management, though the methodology should be open enough that a participant can use or implement their own preferred Key Management solution they choose. 
 
-##### Types of Keys
+#### Types of Keys
 - **Identity Keys:** Each participant has a unique identity on the network, represented by a cryptographic key. This key is used to sign transactions, proving the participant's identity.
 - **Data Encryption Keys:** For sensitive data that needs to be shared on a "need-to-know" basis, participants use encryption keys. These keys can be symmetric (shared between the parties involved) or asymmetric (public/private key pairs).
   
-##### Participant Responsibilities
+#### Participant Responsibilities
 - **Generating Keys:** Participants generate their own identity keys and encryption keys using secure cryptographic algorithms. Platforms like Corda support standard algorithms for this purpose.
 - **Storing Keys:** Participants must securely store their private keys to prevent unauthorized access. This might involve hardware security modules (HSMs), secure software wallets, or other robust key management solutions.
 
 - **Distributing Keys:** Participants share their public keys with their transacting partners. This allows them to verify signatures on transactions and encrypt data for the intended recipient. In the case of symmetric encryption, participants establish a shared secret key through a secure key exchange protocol.
 
 - **Key Rotation:** Participants should periodically rotate their keys to enhance security.
+  
 - **Key Revocation:** Participants need a mechanism to revoke compromised keys and update their transacting partners.
 
 Platforms like Corda can provide the infrastructure for managing identities and signing transactions. They also support secure key exchange protocols. However, the responsibility for generating, storing, and distributing keys still lies with each participant.
 
-#### Decentralized Data Sharing: The "Need-to-Know" Principle
+### Decentralized Data Sharing: The "Need-to-Know" Principle
 The core of this DLT solution lies in its decentralized data sharing model, built upon the fundamental principle of "need-to-know." Unlike traditional systems where data is often centralized and accessible to a broad range of users, this approach ensures that each participant node within the private blockchain only stores and has access to the specific data directly relevant to their own business transactions and authorized interactions.
 
 This selective data sharing is achieved through the inherent design of the DLT platform and the implementation of distributed applications. When a transaction occurs between two or more parties (e.g., a purchase order from a retailer to a supplier), the details of that transaction are securely recorded on the ledger and are accessible to the involved parties. However, this information is not automatically broadcast or made visible to all other participants on the network.
 
-##### Benefits of a "Need-to-Know" Model
+#### Benefits of a "Need-to-Know" Model
 
 * **Enhanced Privacy and Security:** By limiting data access, the risk of sensitive business information being exposed to unauthorized parties is significantly reduced. Participants can confidently transact without fear of unnecessary data dissemination across the entire network.
 * **Improved Performance and Scalability:** Smaller data footprints on each node translate to lower storage requirements and potentially faster query and processing times. This localized data storage contributes to the overall scalability of the network as the number of participants and transactions grows.
@@ -119,7 +121,7 @@ This selective data sharing is achieved through the inherent design of the DLT p
 This decentralized, "need-to-know" data sharing model is a critical differentiator from traditional EDI and even some broader blockchain implementations. It provides a secure, efficient, and privacy-preserving foundation for building a collaborative and standardized supply chain ecosystem.
 
 
-#### Transaction Validation: Ensuring Trust and Accuracy
+### Transaction Validation: Ensuring Trust and Accuracy
 In this private DLT ecosystem, every data exchange – whether it's a purchase order signaling demand, a shipping notification confirming movement, an invoice requesting payment, or any other critical piece of supply chain information traditionally handled by EDI – is treated as a "transaction" that undergoes rigorous validation. This process is the bedrock of trust and ensures that the data shared is accurate, authentic, and follows the agreed-upon business logic.
 
 The pre-defined rules and contracts embedded within the distributed applications act as the primary validators. They meticulously check each incoming transaction against a set of criteria established by the consortium. For instance:
@@ -135,7 +137,7 @@ To meet industry demands, this validation framework should not be overly rigid. 
 By performing these automated checks at the point of data exchange, the transaction validation process acts as a critical gatekeeper, ensuring that only accurate, authorized, and process-compliant information is recorded on the immutable ledger. This proactive approach significantly reduces errors, disputes, and inefficiencies, leading to a more reliable and trustworthy supply chain ecosystem for all participants.
 
 
-##### Key Elements of the Transaction Validation Mechanism
+#### Key Elements of the Transaction Validation Mechanism
 
 * **Digital Signatures:** Every data exchange initiated by a participant must be digitally signed using their private identity key. This cryptographic signature verifies the sender's authenticity and guarantees that the data has not been tampered with in transit. Any alteration would invalidate the signature.
 
@@ -168,7 +170,7 @@ The transaction validation process is the guardian of trust and accuracy within 
 This robust transaction validation mechanism in this DLT-based supply chain ensures the integrity, authenticity, and adherence to pre-defined business processes for every data exchange. By leveraging digital signatures, distributed applications, an efficient permissioned consensus protocol, and the immutability of the ledger, we create a trusted and reliable platform for seamless and standardized supply chain communication.
 
 
-#### Scalability and Performance: Designed for Growth and Efficiency
+### Scalability and Performance: Designed for Growth and Efficiency
 The DLT platform for this supply chain ecosystem is architected with scalability and performance as core objectives, ensuring it can seamlessly accommodate the increasing number of participants and the growing volume of transactions inherent in enterprise-level operations. Several key design choices contribute to this scalability:
 
 * **Permissioned Network Architecture:** Unlike public blockchains that are open to anyone, this is a private, permissioned network. This controlled membership significantly reduces the overhead associated with verifying unknown participants and managing a potentially vast and anonymous network. Knowing the identity of each participant streamlines authentication and authorization processes, contributing to faster transaction processing.
@@ -186,7 +188,7 @@ The DLT platform for this supply chain ecosystem is architected with scalability
 Through this combination of a controlled environment, efficient communication strategies, optimized data handling, and a lightweight consensus mechanism, the DLT platform is designed to scale effectively to support a growing ecosystem of thousands of entities and a high volume of business transactions without compromising speed or reliability.
 
 
-### Value Proposition: DLT Over EDI - Scalability, Cost Efficiency, and Beyond
+## Value Proposition: DLT Over EDI - Scalability, Cost Efficiency, and Beyond
 The limitations of traditional Electronic Data Interchange (EDI) in today's dynamic and high-volume supply chains are becoming increasingly apparent. While EDI has served as a workhorse for decades, its inherent complexities, inconsistencies, and batch-oriented nature create significant hurdles to achieving true efficiency and responsiveness. For large actors like Walmart, managing the sheer volume of EDI transactions through point-to-point FTP connections and local ERP processing often leads to resource bottlenecks, high operational costs, and delays that ultimately impact the end consumer.
 
 Moving to a DLT-based platform offers a paradigm shift with a compelling value proposition, directly addressing these limitations and unlocking new levels of scalability and cost efficiency:
@@ -203,7 +205,7 @@ The transition to a standardized DLT platform promises substantial cost and reso
 * **Offloading Complex Logic:** Distributed applications (smart contracts) on the DLT platform can handle intricate business rules and validation processes in a decentralized manner, offloading this computational burden from Walmart's internal ERP systems.
 * **Efficient Consensus Mechanisms:** Modern consensus algorithms like Raft offer a lightweight approach to ensuring data integrity and agreement, minimizing the energy and resource consumption associated with maintaining a consistent and trustworthy shared ledger.
 
-#### Beyond Scalability and Cost: Unlocking New Value
+### Beyond Scalability and Cost: Unlocking New Value
 The benefits of a DLT platform extend beyond just handling volume and reducing expenses:
 
 * **Real-Time Visibility and Responsiveness:** The near real-time nature of DLT provides Walmart with unprecedented visibility into their supply chain, enabling faster decision-making and improved responsiveness to disruptions or changing customer demands.
@@ -213,11 +215,11 @@ The benefits of a DLT platform extend beyond just handling volume and reducing e
 
 While the operation of DLT nodes does require resources like RAM and CPU, the overall architectural shift away from the complexities of traditional EDI, coupled with strategic design choices in platform selection and data management, offers a clear pathway for large actors like Walmart to achieve superior scalability, significant cost and resource optimization, and unlock substantial new value across their entire supply chain.
 
-### Architecture and Cost Considerations: Aligning with Solution Objectives
+## Architecture and Cost Considerations: Aligning with Solution Objectives
 
 The design of the DLT platform prioritizes scalability, cost efficiency, and ease of integration for all participants, from large enterprises to smaller suppliers. Rather than mandating specific, potentially expensive hardware configurations for every member, the architecture embraces flexibility and the potential for managed service offerings.
 
-#### Architectural Flexibility
+### Architectural Flexibility
 
 * **Modular Design:** The platform's architecture is designed to be modular, allowing participants to interact at a level appropriate for their technical capabilities and transaction volume. While some participants, like large retailers with existing robust infrastructure, may choose to operate and manage their own full DLT nodes, the platform also envisions support for lighter-weight client integrations and the potential for managed node services provided by a core platform or accredited third parties.
   
@@ -227,7 +229,7 @@ The design of the DLT platform prioritizes scalability, cost efficiency, and eas
 
 * **API-Centric Integration:** Regardless of how participants choose to interact with the DLT (via their own node or a managed service), the platform will provide well-documented and easy-to-use APIs for seamless integration with their existing IT infrastructure, minimizing the complexity and cost of connecting to the new ecosystem.
 
-#### Efficiency as a Guiding Principle
+### Efficiency as a Guiding Principle
 These architectural choices are directly aligned with creating the most cost, energy and human resource efficient solution possible:
 
 * **Right-Sized Participation:** The flexibility in node operation and the potential for managed services allow participants to choose a level of involvement and associated cost that matches their needs and resources, avoiding unnecessary capital expenditure.
@@ -241,7 +243,7 @@ These architectural choices are directly aligned with creating the most cost, en
 By prioritizing architectural flexibility and cost efficiency, this DLT-based platform aims to create a sustainable and inclusive ecosystem that delivers significant value over traditional EDI for all participants, regardless of their size or technical infrastructure.
 
 
-### Consortium Governance: Establishing and Maintaining Standards
+## Consortium Governance: Establishing and Maintaining Standards
 A dedicated consortium is crucial for establishing and maintaining this DLT ecosystem. This independent body, inspired by EDI governance models, will be the authority for creating, evolving, and governing the data standards. It will also define the rules for network participation, dispute resolution, and application change management.
 
 To ensure the long-term viability of the consortium and the platform, a sustainable financial model is necessary. Revenue streams may include tiered membership fees, certified appliance solutions, support and training services, custom application development, certification and compliance fees, grants and sponsorships, and revenue from conferences and workshops.
@@ -264,10 +266,9 @@ To balance financial contributions with inclusivity, the consortium will impleme
 * **Staggered or reduced fees for early-stage or small entities:** Lower financial barriers encourage broader participation from smaller organizations.
 * **"Merit-based" voting rights:** Additional votes are awarded for valuable contributions to the ecosystem beyond financial investment.
 
-A hybrid model combining several of these approaches may be most effective.
 
 
-### Conclusion: A Future of Efficiency, Transparency, and Enhanced Customer Experiences
+## Conclusion: A Future of Efficiency, Transparency, and Enhanced Customer Experiences
 By combining the strengths of DLT with a robust consortium governance model, this solution offers a compelling path to replace traditional EDI with a truly interoperable, secure, and efficient platform for supply chain data exchange. The enforced standardization and real-time visibility inherent in this DLT ecosystem will empower participants to move beyond the limitations of EDI, unlocking significant benefits across the supply chain.
 
 For each participant, the transition promises substantial cost reductions through the elimination of complex and error-prone EDI mappings, decreased manual data reconciliation, and streamlined communications and transaction processing. The inherent transparency and auditability of the DLT platform will also minimize disputes and improve overall operational efficiency.
