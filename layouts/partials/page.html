@@ -6,9 +6,19 @@
                     {{ .Title }}
                 </a>
             </h1>
+            {{ with .Params.date }}
+            <div class="post-meta">
+                <time datetime="{{ .Format " 2006-01-02" }}">
+                    {{ .Format "January 2, 2006" }}
+                </time>
+                {{ with $.Params.author }}
+                <span>&nbsp;&bull;&nbsp;</span>
+                <span>{{ . }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
         </header>
         {{ .Content }}
         {{ partial "posts/giscus.html" . }}
     </article>
-
 </section>
