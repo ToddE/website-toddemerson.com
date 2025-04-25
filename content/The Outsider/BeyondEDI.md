@@ -1,5 +1,5 @@
 ---
-title: "Moving Beyond EDI: A New Approach to Supply Chain Interoperability"
+title: "Beyond EDI: A New Approach to Supply Chain Interoperability"
 date: 2025-04-25
 description: "An Outsider's View of EDI"
 author: Todd Emerson
