@@ -51,7 +51,7 @@ theme = 'hugo-coder'
 [[menu.main]]
   name = "Blog: The Outsider"
   weight = 3
-  url = "the-outsider/"
+  url = "posts/"
 
 # Social links
 [[params.social]]

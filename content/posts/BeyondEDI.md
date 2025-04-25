@@ -2,7 +2,9 @@
 title: "Beyond EDI: A New Approach to Supply Chain Interoperability"
 date: 2025-04-25
 description: "An Outsider's View of EDI"
-author: Todd Emerson
+author: "Todd Emerson"
+featuredImage: "/images/blog/edi2blockchain-sm.png"
+tags: ["EDI", "Ideas"]
 draft: false
 # disableComments: false
 ---

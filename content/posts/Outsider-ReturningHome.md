@@ -3,6 +3,7 @@ title: "The Outsider: Returning Home"
 date: 2025-04-11
 description: "An Outsider's View of Central Virginia's Tech"
 author: Todd Emerson
+featuredImage: /images/blog/returnhome.jpg
 draft: false
 # disableComments: false
 ---
