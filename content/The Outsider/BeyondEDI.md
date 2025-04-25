@@ -106,7 +106,7 @@ Each participant is responsible for managing their cryptographic keys. Ideally t
   
 - **Key Revocation:** Participants need a mechanism to revoke compromised keys and update their transacting partners.
 
-While this DLT solution may result in a new type of blockchain, platforms like Corda can provide the infrastructure for managing identities and signing transactions. They also support secure key exchange protocols. However, the responsibility for generating, storing, and distributing keys still lies with each participant.
+While this DLT solution may result in a new type of blockchain, platforms like Corda can provide the infrastructure for managing identities and signing transactions. Corda also supports secure key exchange protocols. However, the responsibility for generating, storing, and distributing keys still lies with each participant.
 
 ### Decentralized Data Sharing: The "Need-to-Know" Principle
 The core of this DLT solution lies in its decentralized data sharing model, built upon the fundamental principle of "need-to-know." Unlike traditional systems where data is often centralized and accessible to a broad range of users, this approach ensures that each participant node within the private blockchain only stores and has access to the specific data directly relevant to their own business transactions and authorized interactions.
@@ -115,7 +115,7 @@ This selective data sharing is achieved through the inherent design of the DLT p
 
 #### Benefits of a "Need-to-Know" Model
 
-* **Enhanced Privacy and Security:** By limiting data access, the risk of sensitive business information being exposed to unauthorized parties is significantly reduced. Participants can confidently transact without fear of unnecessary data dissemination across the entire network.
+* **Enhanced Privacy and Security:** By limiting data access, the risk of sensitive business information being exposed to unauthorized parties is significantly reduced. Participants can confidently exchange information without unnecessary data dissemination across the entire network.
 
 * **Improved Performance and Scalability:** Smaller data footprints on each node translate to lower storage requirements and potentially faster query and processing times. This localized data storage contributes to the overall scalability of the network as the number of participants and transactions grows.
 
@@ -129,7 +129,7 @@ This decentralized, "need-to-know" data sharing model is a critical differentiat
 
 
 ### Transaction Validation: Ensuring Trust and Accuracy
-In this private DLT ecosystem, every data exchange – whether it's a purchase order signaling demand, a shipping notification confirming movement, an invoice requesting payment, or any other critical piece of supply chain information traditionally handled by EDI – is treated as a "transaction" that undergoes rigorous validation. This process is the bedrock of trust and ensures that the data shared is accurate, authentic, and follows the agreed-upon business logic.
+In this private DLT ecosystem, every data exchange – whether it's a purchase order signaling demand, a shipping notification confirming movement, an invoice requesting payment, or any other critical piece of supply chain information traditionally handled by EDI – is treated as a "transaction" that undergoes rigorous validation. This process establishes trust and ensures that the data shared is accurate, authentic, and follows the agreed-upon business logic.
 
 The pre-defined rules and contracts embedded within the distributed applications act as the primary validators. They meticulously check each incoming transaction against a set of criteria established by the consortium. For instance:
 
