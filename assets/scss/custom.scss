@@ -4,13 +4,13 @@ body {
   color: $fg-color;
   background-color: $bg-color;
   font-family: $font-family;
-  font-size: 1.6em;
+  font-size: 1.8em;
   font-weight: 400;
-  line-height: 1.6em;
+  line-height: 1.8em;
 
   @media only screen and (max-width: 768px) {
-    font-size: 1.4em;
-    line-height: 1.4em;
+    font-size: 2.2em;
+    line-height: 2.2em;
   }
 }
 
@@ -53,6 +53,7 @@ h6 {
     font-weight: inherit;
     text-decoration: none;
   }
+
 }
 
 h1 {
@@ -121,4 +122,11 @@ h6 {
   overflow: visible !important; /* Ensure all content is visible, no scrolling */
     background-color: $bg-color;
   font-family: $font-family;
+}
+
+.subtitle {
+  color: inherit;
+  font-weight: inherit;
+  margin-top: 0em;
+  margin-bottom: 1.0em;
 }

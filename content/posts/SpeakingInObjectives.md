@@ -1,8 +1,10 @@
 ---
 title: "Speaking in Objectives: A Professional Parable"
-date: 2024-05-10T16:32:00.000Z
-description: He added yellow.
-author: Warren Emerson & A. Todd Emerson
+date: 2024-05-10
+description: "He added yellow."
+authors: ["Warren Emerson", "Todd Emerson"]
+featuredImage: "/images/blog/father-son-hanes-xsm.webp"
+
 draft: false
 ---
 The following story was one my Dad told me many times as a reminder that it is often most effective to explain what you're trying to accomplish rather than how you want something done. In my early days as a Program Manager, I had a thoughtful manager who took the time to sit with me and put it in the terms of explaining the "what" rather than the "how". 
