@@ -12,6 +12,13 @@
       {{ i18n "licensed_under" }} {{ .Site.Params.license | safeHTML }}
 
     {{ end }}
+
+    <!-- If there is a privacy.md file in the content folder, then show a link to the privacy policy -->
+    {{ with $.Site.GetPage "privacy" }}
+      ·
+      <a href="{{ .Permalink }}">Privacy Policy</a>
+    {{ end }}
+
     <!-- {{ i18n "powered_by" }} <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>. -->
     {{ if (and .Site.Params.commit .GitInfo) }}
       ·
