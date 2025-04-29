@@ -28,7 +28,10 @@ theme = 'hugo-coder'
   poweredby = ""
   customSCSS = ["scss/custom.scss"]
   # cusdis = "https://cusdis.com"
-  
+
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
 
 # information found in config.toml   
 [taxonomies]
@@ -52,6 +55,11 @@ theme = 'hugo-coder'
   name = "Blog: The Outsider"
   weight = 3
   url = "posts/"
+
+[[menu.main]]
+name = "My Dad: Warren Emerson"
+weight = 3
+url = "wemerson/"
 
 # Social links
 [[params.social]]
