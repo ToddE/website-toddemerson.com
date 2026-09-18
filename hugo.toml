@@ -93,8 +93,9 @@ url = "wemerson/"
   loading = ""
 
 [params.umami]
-    siteID = "2bd6d18d-3fb9-4fbd-a934-d2e4ab7755e6"
-    scriptURL = "https://cloud.umami.is/script.js" 
+    siteID = "2a7838092-0926-4ea7-807b-7841b912a456"
+    scriptURL = "https://metrix.pluralfusion.com/script.js" 
+    recorderURL = "https://metrix.pluralfusion.com/recorder.js"
     # refer to the "tracking code" tab in your umami website dashboard 
     # to obtain the script url
 
